@@ -1,7 +1,7 @@
 
-app.directive("navbarRecipe", function() {
+app.directive("navbarHams", function() {
     return {
-        templateUrl: "app/navbar/navbar.html",
+        templateUrl: "app_/_navbar/navbar_.html",
         controller: "navbarCtrl"
     }
 })
