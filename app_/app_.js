@@ -4,7 +4,7 @@ var app = angular.module("Homeowner-Association-Management-System", ["ngRoute"])
 app.config(function($routeProvider) {
     $routeProvider
     .when("/", {
-        templateUrl: "app_/home_/home.html"
+        templateUrl: "app_/home_/home_.html"
     }).when("/login", {
         templateUrl: "app_/login/login.html",
         controller: "loginCtrl"
