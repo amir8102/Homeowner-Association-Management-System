@@ -1,0 +1,33 @@
+{
+    "users": [
+        {
+            "id": 1,
+            "fname": "Nir",
+            "lname": "Channes",
+            "email": "nir@nir.com",
+            "pwd": "1234"
+        },
+        {
+            "id": 2,
+            "fname": "John",
+            "lname": "Doe",
+            "email": "john@john.com",
+            "pwd": "1234"
+        },
+        {
+         "id": 3,
+            "fname": "Ben",
+            "lname": "cohen",
+            "email": "Ben@Ben.com",
+            "pwd": "1234"
+        },
+        {
+            "id": 4,
+            "fname": "Mike",
+            "lname": "Levi",
+            "email": "Mike@Mike.com",
+            "pwd": "1234"
+        }
+    ]
+}
+
