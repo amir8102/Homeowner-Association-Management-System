@@ -1,0 +1,13 @@
+hello
+
+
+<div class="col-sm-6 col-md-3 my-2" ng-repeat="message in messages">
+    <div class="card massage">
+        <img class="card-img-top" ng-src="{{message.imgUrl}}" alt="">
+        <div class="card-body">
+            <h4 class="card-title">Title:{{message.title}}</h4>
+            <p class="card-text">Details:{{message.details}}</p>
+            <h6 class="card-title">Created:{{message.creationTime}}</h6>
+            <button type="button" class="btn btn-xs btn-success" ng-show="isUserAdmin()" ng-click="deleteMessage(message)">Delete</button>
+        </div>
+</div>

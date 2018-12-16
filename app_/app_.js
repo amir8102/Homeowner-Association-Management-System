@@ -14,6 +14,10 @@ app.config(function($routeProvider) {
         templateUrl: "app_/sign_up/signup.html",
         controller: "signupCtrl"
     })
+    .when("/messages", {
+        templateUrl: "app_/messages/messages.html",
+        controller: "messagesCtrl"
+    })
     .when("/dashboard", {
         templateUrl: "app_/dashboard/dashboard.html",
         controller: "dashboardCtrl"
