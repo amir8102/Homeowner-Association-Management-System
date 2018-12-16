@@ -6,7 +6,7 @@ app.factory("messages", function($q, $http, user) {
 
     function Message(plainRecipe) {
         this.id = plainRecipe.id;
-        this.name = plainRecipe.name;
+        this.title = plainRecipe.title;
         this.description = plainRecipe.description;
         // this.ingredients = plainRecipe.ingredients;
         // this.steps = plainRecipe.steps;
@@ -17,23 +17,25 @@ app.factory("messages", function($q, $http, user) {
     function getActiveUserMessages() {
         var async = $q.defer();
 
-        var userId = user.getActiveUser().id;
+         var userId = user.getActiveUser().id;
 
         // This is a hack since we don't really have a persistant server.
         // So I want to get all recipes only once.
-        if (wasEverLoaded[userId]) {
-            async.resolve(recipes[userId]);
-        } else {
-            messages[userId] = [];
-            var getRecipesURL = "http://my-json-server.typicode.com/nirch/recipe-book-v3/messages";
+        // if (wasEverLoaded[userId]) {
+        //     async.resolve(recipes[userId]);
+        // } 
+        // else 
+        {
+            // messages[userId] = [];
+            var getMessagesURL = "http://my-json-server.typicode.com/amir8102/Homeowner-Association-Management-System/messages?userId=" + userId;;
             // var getRecipesURL = "http://my-json-server.typicode.com/nirch/recipe-book-v3/recipes?userId=" + userId;
-            $http.get(getRecipesURL).then(function(response) {
+            $http.get(getMessagesURL).then(function(response) {
                 for (var i = 0; i < response.data.length; i++) {
                     var message = new Message(response.data[i]);
-                    messages[userId].push(message);
+                    messages.push(message);
                 }
-                wasEverLoaded[userId] = true;
-                async.resolve(messages[userId]);
+                // wasEverLoaded[userId] = true;
+                async.resolve(messages);
             }, function(error) {
                 async.reject(error);
             });

@@ -24,6 +24,7 @@ app.factory("user", function($q, $http) {
         var loginURL = "http://my-json-server.typicode.com/amir1802/Homeowner-Association-Management-System/users?email=" +
             email + "&pwd=" + pwd;
         $http.get(loginURL).then(function(response) {
+            debugger;
             if (response.data.length > 0) {
                 // success login
                 activeUser = new User(response.data[0]);
