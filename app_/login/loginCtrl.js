@@ -8,10 +8,10 @@ app.controller("loginCtrl", function($scope, $location, user) {
 
     $scope.login = function() {
         $scope.invalidLogin = false;
-
+            debugger;
         user.login($scope.email, $scope.pwd).then(function() {
             // success login
-            $location.path("/Homeowner")
+            $location.path("/")
         }, function(error) {
             // failed login
             $scope.invalidLogin = true;
